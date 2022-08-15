@@ -49,5 +49,3 @@ module.exports = {
     return await queryInterface.dropTable("Users");
   }
 };
-
-npx sequelize model:generate --name Trip --attributes spotId:INTEGER,
