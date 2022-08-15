@@ -26,6 +26,12 @@ const validateSignup = [
     handleValidationErrors
   ];
 
+//GET user
+router.get('/api/profile', (req, res) => {
+  const {user} = req.body;
+  
+})
+
 // Sign up
 router.post(
     '/',
@@ -41,6 +47,8 @@ router.post(
       });
     }
   );
+
+
 
 
 

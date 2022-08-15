@@ -1,4 +1,7 @@
 "use strict";
+
+const { INTEGER } = require("sequelize/types");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return await queryInterface.createTable("Users", {
@@ -46,3 +49,5 @@ module.exports = {
     return await queryInterface.dropTable("Users");
   }
 };
+
+npx sequelize model:generate --name Trip --attributes spotId:INTEGER,
