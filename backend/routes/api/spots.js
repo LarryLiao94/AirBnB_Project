@@ -157,8 +157,19 @@ router.post('/', requireAuth, spotValidator, async (req, res, next) => {
         price
     });
     
-    
-    return res.json(newSpot);
+    return res.json(201, {
+        "id": newSpot.id,
+        "ownerId": newSpot.ownerId,
+        "address": newSpot.address,
+        "city": newSpot.city,
+        "state": newSpot.state,
+        "country": newSpot.county,
+        "lat": newSpot.lat,
+        "lng": newSpot.lng,
+        "name": newSpot.name,
+        "description": newSpot.description,
+        "price": newSpot.price
+    });
 });
 
 //create review for a spot based on spots id
