@@ -133,19 +133,19 @@ router.delete('/:spotId', requireAuth, async (req, res, next) => {
 router.post('/', requireAuth, spotValidator, async (req, res, next) => {
     const { address, city, state, country, lat, lng, name, description, price } = req.body;
     
-    if(!address){
-        res.status(400);
-        return res.json({
-            "message": "Validation Error",
-            "statusCode": 400,
-            "errors": {
-                "title": "Street address is required"
-            }
-        });
-    }
+    // if(!address){
+    //     res.status(400);
+    //     return res.json({
+    //         "message": "Validation Error",
+    //         "statusCode": 400,
+    //         "errors": {
+    //             "title": "Street address is required"
+    //         }
+    //     });
+    // }
     
     const newSpot = await Spot.create({
-        userId: req.user.id,
+        ownerId: req.user.id,
         address,
         city,
         state,
@@ -489,7 +489,7 @@ router.get('/filtered', queryFilterValidator, async (req, res) => {
     if(!page){
         page = 0;
     } else {
-        page = paresInt(req.query.page);
+        page = parseInt(req.query.page);
     };
 
     const size = parseInt(req.query.size, 20);

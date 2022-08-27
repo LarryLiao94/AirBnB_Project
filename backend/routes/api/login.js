@@ -31,7 +31,7 @@ router.post('/', validateLogin,  async (req, res, next) => {
       err.errors = ['The provided emails were invalid.'];
       return next(err);
     }
-
+    
     const token = await setTokenCookie(res, user);
 
     if(token){

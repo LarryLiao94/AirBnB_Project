@@ -74,7 +74,7 @@ router.put('/:reviewId', requireAuth, async (req, res) => {
     const { review, stars } = req.body;
     const { reviewId } = req.params;
     const currentUserId = req.user.id
-    const reviewToUpdate = await Comment.findByPk(reviewId);
+    const reviewToUpdate = await Review.findByPk(reviewId);
 
     if(!reviewToUpdate){
         res.status(404);
