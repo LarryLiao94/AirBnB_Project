@@ -495,7 +495,7 @@ router.get('/filtered', queryFilterValidator, async (req, res) => {
         maxPrice 
     } = req.query;
 
-    const page = req.query.page;
+    let page = req.query.page;
 
     if(!page){
         page = 0;
@@ -503,7 +503,7 @@ router.get('/filtered', queryFilterValidator, async (req, res) => {
         page = parseInt(req.query.page);
     };
 
-    const size = parseInt(req.query.size, 20);
+    let size = parseInt(req.query.size, 20);
 
     if(!size){
         size = 20;
