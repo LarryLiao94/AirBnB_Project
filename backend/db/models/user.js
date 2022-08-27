@@ -9,19 +9,16 @@ module.exports = (sequelize, DataTypes) => {
       return { id, username, email };
     }
     validatePassword(password) {
-      return bcrypt.compareSync(password, this.hashedPassword.toString());
+      return bcrypt.compareSync(password, this.password.toString());
     }
     static getCurrentUserById(id) {
       return User.scope("currentUser").findByPk(id);
     }
-    static async login({ credential, password }) {
+    static async login({ email, password }) {
       const { Op } = require('sequelize');
       const user = await User.scope('loginUser').findOne({
         where: {
-          [Op.or]: {
-            username: credential,
-            email: credential
-          }
+          email: email
         }
       });
       if (user && user.validatePassword(password)) {
@@ -33,14 +30,38 @@ module.exports = (sequelize, DataTypes) => {
       const user = await User.create({
         firstName,
         lastName,
-        username,
         email,
-        hashedPassword
+        username,
+        password: hashedPassword
       });
       return await User.scope('currentUser').findByPk(user.id);
     }
     static associate(models) {
       // define association here
+      User.hasMany(
+        models.Trip,
+        {
+          foreignKey: 'userId',
+          onDelete: 'CASCADE',
+          hooks: true
+        }
+      );
+      User.hasMany(
+        models.Spot,
+        {
+          foreignKey: 'ownerId',
+          onDelete: 'CASCADE',
+          hooks: true
+        }
+      );
+      User.hasMany(
+        models.Review,
+        {
+          foreignKey: 'userId',
+          onDelete: 'CASCADE',
+          hooks: true
+        }
+      );
     }
   };
   
@@ -77,10 +98,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           len: [3, 256],
-          isEmail: true
         }
       },
-      hashedPassword: {
+      password: {
         type: DataTypes.STRING.BINARY,
         allowNull: false,
         validate: {
@@ -93,12 +113,12 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "User",
       defaultScope: {
         attributes: {
-          exclude: ["hashedPassword", "email", "createdAt", "updatedAt"]
+          exclude: ["password", "email", "createdAt", "updatedAt"]
         }
       },
       scopes: {
         currentUser: {
-          attributes: { exclude: ["hashedPassword"] }
+          attributes: { exclude: ["password", "createdAt", "updatedAt"] }
         },
         loginUser: {
           attributes: {}

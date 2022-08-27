@@ -1,7 +1,5 @@
 "use strict";
 
-const { INTEGER } = require("sequelize/types");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return await queryInterface.createTable("Users", {
@@ -29,7 +27,7 @@ module.exports = {
         allowNull: false,
         unique: true
       },
-      hashedPassword: {
+      password: {
         type: Sequelize.STRING.BINARY,
         allowNull: false
       },
@@ -50,4 +48,3 @@ module.exports = {
   }
 };
 
-//hello

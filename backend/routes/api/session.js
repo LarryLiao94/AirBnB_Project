@@ -19,7 +19,7 @@ const validateLogin = [
 
 // Log in
 router.post(
-    '/',
+    '/api/login',
     validateLogin,
     async (req, res, next) => {
       const { credential, password } = req.body;

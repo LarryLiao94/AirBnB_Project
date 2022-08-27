@@ -1,12 +1,15 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Trips', {
+    await queryInterface.createTable('Images', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      url: {
+        type: Sequelize.STRING
       },
       spotId: {
         type: Sequelize.INTEGER,
@@ -24,11 +27,11 @@ module.exports = {
         },
         onDelete: 'cascade'
       },
-      startDate: {
-        type: Sequelize.DATE
+      imageableType:{
+        type: Sequelize.STRING
       },
-      endDate: {
-        type: Sequelize.DATE
+      imageableId: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -43,6 +46,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Trips');
+    await queryInterface.dropTable('Images');
   }
 };
