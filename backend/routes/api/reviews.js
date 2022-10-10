@@ -72,7 +72,6 @@ router.post("/:reviewId/images", requireAuth, async (req, res) => {
 });
 
 //edit review
-<<<<<<< HEAD
 router.put('/:reviewId', requireAuth, async (req, res) => {
     const { review, stars } = req.body;
     const { reviewId } = req.params;
@@ -119,54 +118,6 @@ router.put('/:reviewId', requireAuth, async (req, res) => {
             "message": "Review may only be edited by its author"
         })
     }
-=======
-router.put("/:reviewId", requireAuth, async (req, res) => {
-  const { review, stars } = req.body;
-  const { reviewId } = req.params;
-  const currentUserId = req.user.id;
-  const reviewToUpdate = await Review.findByPk(reviewId);
-
-  if (!reviewToUpdate) {
-    res.status(404);
-    return res.json({
-      message: "Review couldn't be found",
-      statusCode: 404,
-    });
-  }
-
-  if (!stars || stars < 1 || stars > 5) {
-    res.status(400);
-    return res.json({
-      message: "Validation error",
-      statusCode: 400,
-      errors: {
-        stars: "Stars must be an integer from 1 to 5",
-      },
-    });
-  }
-
-  if (!review) {
-    res.status(400);
-    return res.json({
-      message: "Validation error",
-      statusCode: 400,
-      errors: {
-        review: "Review text is required",
-      },
-    });
-  }
-  if (reviewToUpdate.userId === req.user.id) {
-    reviewToUpdate.update({
-      review,
-      stars,
-    });
-    return res.json(reviewToUpdate);
-  } else {
-    return res.json({
-      message: "Review may only be edited by its author",
-    });
-  }
->>>>>>> dev
 });
 
 //delete review
