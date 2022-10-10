@@ -28,7 +28,7 @@ A clone of the popular social hosting website, [AirBnB](airbnb.com). Users on Ai
   <p align="center">
     A clone of the popular social hosting website, [AirBnB](airbnb.com). Users on AirBnB may offer their places to host overnight stays, stay at other places that other users have hosted.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+   
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">Live Link</a>
