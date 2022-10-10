@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.react--container {
+    max-width: 550px;
+    border: 2px solid black;
+}
+
+.navbar--container{
+    height: 40px;
+    box-shadow: 0px 2px 3px rgb(164, 163, 163);
+    display: flex;
+    align-items: center;
+}
+
+.navbar--logo{
+    height: 30px;
+    margin-left: 33px;
+}
+
+.header--container {
+    border: 1px solid black;
+    display: flex;
+    padding: 25px;
+}
+
+/* .header--logo {
+    height: 250px;
+    margin: auto;
+    align-self: center;
+} */

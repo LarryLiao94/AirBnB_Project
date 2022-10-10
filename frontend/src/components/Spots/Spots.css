@@ -1,0 +1,49 @@
+.all-spots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 80px;
+    margin-right: 20px;
+    padding-top: 20px;
+  }
+
+  .allSpots{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .single-spot-card {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 15px 1.5%;
+  }
+  
+  .single-spot-link {
+    text-decoration: none;
+  }
+  
+  .single-spot-image {
+    height: 200px;
+    width: 250px;
+    border-radius: 20px 20px;
+  }
+  
+  .single-spot-details-card {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: large;
+    color: black;
+  }
+
+  .single-spot-details-card span{
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #rating_default {
+    margin-left: 5px;
+  }
+  
+  .single-spot-price {
+    color: black;
+  }

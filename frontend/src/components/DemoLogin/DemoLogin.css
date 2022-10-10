@@ -1,0 +1,13 @@
+.demo-login {
+    background:linear-gradient(120deg, #fd5c63, #861657);
+    border: none;
+    color: white;
+    text-align:center;
+    font-size: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #fd5c63;
+}

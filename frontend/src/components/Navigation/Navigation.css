@@ -1,0 +1,19 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+.right-side-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.become-a-host-button {
+    padding-top: 5px;
+
+}

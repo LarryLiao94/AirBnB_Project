@@ -14,7 +14,7 @@ module.exports = {
         name: "firstName",
         description: 'first description of the first spot',
         price: 11.11,
-        previewImage: "first url"
+        previewImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       },
       {
         ownerId: 2,
@@ -27,7 +27,7 @@ module.exports = {
         name: "secondName",
         description: 'second description of the first spot',
         price: 22.22,
-        previewImage: "second url"
+        previewImage: "https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       },
       {
         ownerId: 3,
@@ -40,7 +40,7 @@ module.exports = {
         name: "thirdName",
         description: 'third description of the first spot',
         price: 33.33,
-        previewImage: "third url"
+        previewImage: "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
       },
       {
         ownerId: 4,
@@ -53,7 +53,7 @@ module.exports = {
         name: "fourthName",
         description: 'fourth description of the first spot',
         price: 44.44,
-        previewImage: "fourth url"
+        previewImage: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       },
       {
         ownerId: 5,
@@ -66,7 +66,7 @@ module.exports = {
         name: "fifthName",
         description: 'fifth description of the first spot',
         price: 55.55,
-        previewImage: "fifth url"
+        previewImage: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
       },
       {
         ownerId: 6,
@@ -79,7 +79,7 @@ module.exports = {
         name: "sixthName",
         description: 'sixth description of the first spot',
         price: 66.66,
-        previewImage: "sixth url"
+        previewImage: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
       },
     ], {});
   },
