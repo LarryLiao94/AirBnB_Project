@@ -1,0 +1,71 @@
+.login--container{
+    border-radius: 6px;
+    padding: 25px;
+    max-width: 400px;
+    width: 100%;
+    background-color:white;
+    margin: auto;
+    box-shadow: 0px 3px 3px darkgray;
+    font-family: Tahoma;
+
+}
+
+.loginformvalue {
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 0;
+  height: 44px;
+  font-size: 14px;
+  border: 1px solid black;
+  font-family: Tahoma;
+
+}
+
+.login-title {
+  display: block;
+  margin: auto;
+  font-size: 1.8em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: black;
+  font-family: "HHelvetica Neue";
+}
+
+.password-input-field {
+  display: block;
+  height: 44px;
+  width: 90%;
+  margin: auto;
+  background: #fff;
+  border-radius: 3px;
+  margin-top: 15px;
+  border: 1px solid black;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.login-button {
+  display: block;
+  border-radius: 3px;
+  padding: 15px 20px;
+  margin-top: 15px;
+  margin:auto;
+  width: 60%;
+  height: 50%;
+  background: linear-gradient(120deg, #fd5c63, #861657);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.new-user {
+  display: block;
+  margin:auto;
+  margin-top: 10px;
+  cursor: pointer;
+}

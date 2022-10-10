@@ -1,0 +1,26 @@
+.user-info--container {
+    padding-top: 25px;
+    height: 100vh;
+}
+
+.userinfo-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.review-list {
+    border: 2px solid grey;
+}
+
+.review-list {
+    border: 2px solid blue;
+
+}
+
+.review-list--container .row{
+    border: 4px solid gray;
+    padding: 10px;
+    max-width: 350px;
+    width: 100%;
+}

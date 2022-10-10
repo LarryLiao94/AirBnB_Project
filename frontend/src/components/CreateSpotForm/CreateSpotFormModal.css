@@ -1,0 +1,15 @@
+.add_listing_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9px;
+}
+
+.add_listing_button:hover{
+    cursor: pointer;
+}
+
+.btn-wrap{
+    margin-top: 10px;
+}

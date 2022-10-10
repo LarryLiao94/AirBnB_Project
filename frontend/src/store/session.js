@@ -1,4 +1,5 @@
 import { csrfFetch } from "./csrf";
+import { Redirect } from "react-router-dom";
 
 const SET_USER = "session/setUser";
 const REMOVE_USER = "session/removeUser";
@@ -8,7 +9,7 @@ const initialState = { user: null };
 export const setUser = (user) => {
   return {
     type: SET_USER,
-    payload: user,
+    user,
   };
 };
 
@@ -26,12 +27,13 @@ export const restoreUser = () => async (dispatch) => {
 };
 
 export const signup = (user) => async (dispatch) => {
-  const { email, password, firstName, lastName } = user;
-  const response = await csrfFetch("/api/users", {
+  const { email, username, password, firstName, lastName } = user;
+  const response = await csrfFetch("/api/create-user", {
     method: "POST",
     body: JSON.stringify({
       email,
       password,
+      username,
       firstName,
       lastName,
     }),
@@ -43,7 +45,7 @@ export const signup = (user) => async (dispatch) => {
 
 export const login = (user) => async (dispatch) => {
   const { email, password } = user;
-  const response = await csrfFetch("/api/session", {
+  const response = await csrfFetch("/api/login", {
     method: "POST",
     body: JSON.stringify({
       email,
@@ -62,18 +64,17 @@ export const logout = () => async (dispatch) => {
     method: "DELETE",
   });
   dispatch(removeUser());
+  // <Redirect to='/' />
   return response;
 };
 
 const sessionReducer = (state = initialState, action) => {
-  let newState;
+  let newState = { ...state };
   switch (action.type) {
     case SET_USER:
-      newState = Object.assign({}, state);
-      newState.user = action.payload;
+      newState.user = action.user;
       return newState;
     case REMOVE_USER:
-      newState = Object.assign({}, state);
       newState.user = null;
       return newState;
     default:

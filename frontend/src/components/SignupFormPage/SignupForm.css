@@ -1,0 +1,18 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+input {
+  margin-left: 10px;
+}
