@@ -16,6 +16,8 @@ import EditSpotForm from "./components/EditSpotForm/EditSpotForm";
 import UserInfo from "./components/CurrentUserInfo";
 import Footer from "./components/Footer";
 
+//y
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
