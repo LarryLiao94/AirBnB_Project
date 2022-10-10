@@ -35,7 +35,8 @@ const EditReviewForm = ({reviewId, closeModal}) => {
     if (res) {
       closeModal(false)
     }
-
+    history.push('/');
+    history.push('/profile');
   }
 
  // console.log("id", reviewId)
