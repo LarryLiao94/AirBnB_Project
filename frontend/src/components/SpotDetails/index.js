@@ -87,7 +87,7 @@ const SpotDetails = () => {
             {spot.Images.map((image, i) => {
               return (
                 <div className="column" key={i}>
-                  <img src={image.url} alt={`image${i}`} />
+                  <img src={image.url || image.previewImage} alt={`image${i}`} />
                 </div>
               );
             })}

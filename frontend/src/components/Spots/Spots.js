@@ -25,7 +25,7 @@ function Spots() {
   if (!spots) {
     return null;
   }
-
+  
   return (
     <div className="all-spots">
       <div className="allSpots">
@@ -34,7 +34,7 @@ function Spots() {
           return (
             <div className='single-spot-card' key={spot.id}>
             <div className='single-spot-image-card'>
-                <img className='single-spot-image' src={spot.previewImage} alt={spot.name} />
+                <img className='single-spot-image' src={spot.previewImage || spot.url} alt={spot.name} />
             </div>
             <Link className='single-spot-link' to={`/spots/${spot.id}`} key={spot.id}>
               {spot.name}

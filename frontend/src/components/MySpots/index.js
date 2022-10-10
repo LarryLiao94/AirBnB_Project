@@ -44,7 +44,7 @@ const MySpots = () => {
             <div className="singleSpot" key={spot.id}>
               <h1>{spot.name}</h1>
               <img
-                src={spot.previewImage}
+                src={spot.previewImage || spot.url}
                 alt="loading"
                 className="previewImg"
               />

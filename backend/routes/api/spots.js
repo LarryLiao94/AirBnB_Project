@@ -131,7 +131,7 @@ router.delete('/:spotId', requireAuth, async (req, res, next) => {
 
 //create spot
 router.post('/', requireAuth, spotValidator, async (req, res, next) => {
-    const { address, city, state, country, lat, lng, name, description, price } = req.body;
+    const { address, city, state, country, lat, lng, name, description, price, previewImage } = req.body;
     
     // if(!address){
     //     res.status(400);
@@ -156,7 +156,8 @@ router.post('/', requireAuth, spotValidator, async (req, res, next) => {
         lng,
         name,
         description,
-        price
+        price,
+        previewImage
     });
     
     return res.json(201, {
@@ -171,6 +172,7 @@ router.post('/', requireAuth, spotValidator, async (req, res, next) => {
         "name": newSpot.name,
         "description": newSpot.description,
         "price": newSpot.price,
+        "previewImage": newSpot.previewImage,
         "createdAt": newSpot.createdAt,
         "updatedAt": newSpot.updatedAt
     });

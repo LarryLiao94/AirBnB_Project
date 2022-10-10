@@ -168,7 +168,7 @@ const CreateSpotForm = (props) => {
       previewImage,
     };
 
-    let createdSpot = dispatch(createSpot(payload));
+    let createdSpot = await dispatch(createSpot(payload));
 
     if (createdSpot) {
       handleCancelClick()
@@ -176,7 +176,7 @@ const CreateSpotForm = (props) => {
       closeModal(false);
 
       // history.push(`/spots/${createdSpot.id}`);
-      history.push("/");
+      history.push("/profile/spots");
     }
   };
 
