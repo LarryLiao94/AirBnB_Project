@@ -210,6 +210,7 @@ const CreateSpotForm = (props) => {
           </div>
         )} */}
         <form className="create-spot-form" onSubmit={handleSubmit}>
+          <p className="create-spot-form-labels">Address</p>
           <input
             type="text"
             placeholder="Address"
@@ -220,6 +221,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && addressErr && (
             <span className="error-text">Maximum address length is 20</span>
           )}
+          <p className="create-spot-form-labels">City</p>
           <input
             type="text"
             placeholder="City"
@@ -230,6 +232,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && cityErr && (
             <span className="error-text">Maximum city length is 20</span>
           )}
+          <p className="create-spot-form-labels">State</p>
           <input
             type="text"
             placeholder="State"
@@ -240,6 +243,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && stateErr && (
             <span className="error-text">Maximum State length is 20</span>
           )}
+          <p className="create-spot-form-labels">Country</p>
           <input
             type="text"
             placeholder="Country"
@@ -250,6 +254,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && countryErr && (
             <span className="error-text">Maximum Country length is 40</span>
           )}
+          <p className="create-spot-form-labels">Latitude</p>
           <input
             type="number"
             placeholder="lat"
@@ -260,6 +265,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && latErr && (
             <span className="error-text">Latitutde must be a number</span>
           )}
+          <p className="create-spot-form-labels">Longitude</p>
           <input
             type="number"
             placeholder="lng"
@@ -270,6 +276,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && lngErr && (
             <span className="error-text">Longitude must be a number</span>
           )}
+          <p className="create-spot-form-labels">name</p>
           <input
             type="text"
             placeholder="name"
@@ -282,6 +289,7 @@ const CreateSpotForm = (props) => {
               Name must be less than 50 characters
             </span>
           )}
+          <p className="create-spot-form-labels">description</p>
           <input
             type="text"
             placeholder="description"
@@ -294,6 +302,7 @@ const CreateSpotForm = (props) => {
               Description must less than 200 characters
             </span>
           )}
+          <p className="create-spot-form-labels">price</p>
           <input
             type="number"
             placeholder="price"
@@ -304,6 +313,7 @@ const CreateSpotForm = (props) => {
           {hasSubmitted && priceErr && (
             <span className="error-text">Price must be a number</span>
           )}
+          <p className="create-spot-form-labels">preview image</p>
           <input
             type="text"
             placeholder="preview image"
