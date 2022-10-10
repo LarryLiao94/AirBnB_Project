@@ -21,7 +21,7 @@ function CreateReviewForm({ loadSpotId, onSubmit, closeReviewModal }) {
       review: reviewComments,
       stars: parseInt(stars),
     };
-    console.log("got here>>>")
+    
     let res = await dispatch(reviewActions.createNewReview(spotId, newReview))
     .catch(async (res) => {
       const data = await res.json();
@@ -32,7 +32,7 @@ function CreateReviewForm({ loadSpotId, onSubmit, closeReviewModal }) {
       closeReviewModal(false);
       history.push("/");
     }else{
-      console.log("got here>>")
+      
       alert("You already have a review!")
     }
   };
