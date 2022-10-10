@@ -68,7 +68,8 @@ A clone of the popular social hosting website, [AirBnB](airbnb.com). Users on Ai
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://example.com)![front page](https://user-images.githubusercontent.com/91893259/194940777-ddd281ff-250a-4dcb-85f1-7ee3cc361904.png)
+
 
 My first fullstack project
 
